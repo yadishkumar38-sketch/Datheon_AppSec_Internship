@@ -21,6 +21,7 @@
 | **Commencement Date** | November 20, 2026 |
 | **Evaluation Cutoff / Deadline** | December 18, 2026 |
 | **Submission Repository** | `Datheon_AppSec_Internship` |
+| **Official Submission Document** | **[SUBMISSION.md](SUBMISSION.md)** |
 | **Target Verification Tag** | **`@Datheon`** |
 
 ---

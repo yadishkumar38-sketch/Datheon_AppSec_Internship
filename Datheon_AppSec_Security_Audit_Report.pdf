@@ -1,0 +1,117 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 4 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> /Contents 8 0 R >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R /F2 6 0 R /F3 7 0 R >> >> /Contents 9 0 R >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+8 0 obj
+<< /Length 3649 >>
+stream
+0.05 0.09 0.16 rg
+36 700 540 60 re f
+BT /F2 18 Tf 1 1 1 rg 50 735 Td (DATHEON APPLICATION SECURITY INTERNSHIP) Tj ET
+BT /F1 10 Tf 0.22 0.74 0.97 rg 50 715 Td (OFFICIAL SUBMISSION & AUDIT REPORT | ID: DT-2026-7ZENR) Tj ET
+0.95 0.96 0.98 rg 36 610 540 75 re f
+0.8 0.85 0.9 RG 1 w 36 610 540 75 re s
+BT /F2 10 Tf 0.1 0.1 0.2 rg 50 665 Td (Student / Researcher: ) Tj /F1 10 Tf (Yadish Kumar) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.2 rg 320 665 Td (Datheon Application ID: ) Tj /F1 10 Tf (DT-2026-7ZENR) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.2 rg 50 645 Td (Repository: ) Tj /F1 10 Tf (github.com/yadishkumar38-sketch/Datheon_AppSec_Internship) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.2 rg 50 625 Td (Audit Track: ) Tj /F1 10 Tf (4-Week Cadence | Nov 20 - Dec 18, 2026) Tj /F2 10 Tf 320 625 Td (Status: ) Tj /F2 10 Tf 0 0.5 0.2 rg (100% Verified) Tj ET
+0.93 0.27 0.27 rg 36 575 540 22 re f
+BT /F2 12 Tf 1 1 1 rg 45 582 Td (TASK 1: BLACK-BOX RECONNAISSANCE & IDOR DISCOVERY) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.2 rg 50 550 Td (Vulnerability Classification:) Tj /F1 10 Tf ( OWASP API1:2023 Broken Object Level Authorization) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.2 rg 50 535 Td (CVSS v3.1 Severity Score:) Tj /F2 10 Tf 0.8 0.2 0.2 rg ( 7.5 HIGH ) Tj /F1 9 Tf (CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.2 rg 50 520 Td (Target Endpoint:) Tj /F3 9.5 Tf ( GET /api/v1/dashboard?appId={ID} (Unauthenticated)) Tj ET
+BT /F1 9.5 Tf 0.2 0.2 0.2 rg 50 495 Td (During black-box testing, candidate dashboard queries were found to be completely unauthenticated.) Tj ET
+BT /F1 9.5 Tf 0.2 0.2 0.2 rg 50 482 Td (An external attacker can iterate through sequential IDs and extract full Personally Identifiable) Tj ET
+BT /F1 9.5 Tf 0.2 0.2 0.2 rg 50 469 Td (Information (PII), contact numbers, email addresses, and confidential mentor grading notes.) Tj ET
+0.05 0.07 0.12 rg 50 350 512 105 re f
+BT /F3 8.5 Tf 0.4 0.8 1 rg 60 435 Td ($ curl -s -X GET "http://localhost:3000/api/v1/dashboard?appId=DT-2026-001") Tj ET
+BT /F3 8 Tf 0.2 0.9 0.4 rg 60 415 Td (HTTP/1.1 200 OK | Content-Type: application/json) Tj ET
+BT /F3 8 Tf 0.9 0.9 0.9 rg 60 395 Td ({ "appId": "DT-2026-001", "studentName": "Alice Harrison",) Tj ET
+BT /F3 8 Tf 0.9 0.9 0.9 rg 60 380 Td (  "email": "alice@datheon-intern.org", "phone": "+1-555-019-2834",) Tj ET
+BT /F3 8 Tf 0.9 0.9 0.9 rg 60 365 Td (  "internalEvaluationGrade": "A+", "notes": "Strong grasp of Wireshark..." }) Tj ET
+0.06 0.72 0.5 rg 36 305 540 22 re f
+BT /F2 12 Tf 1 1 1 rg 45 312 Td (TASK 2: ZERO-TRUST BOLA REMEDIATION (NODE.JS / TYPESCRIPT)) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.2 rg 50 280 Td (Defense Architecture:) Tj /F1 10 Tf ( Compound Database Filtering + authGuard Middleware) Tj ET
+BT /F1 9.5 Tf 0.2 0.2 0.2 rg 50 260 Td (1. Defensive authGuard verifies HMAC-SHA256 session token from HttpOnly cookie (rejects with 401).) Tj ET
+BT /F1 9.5 Tf 0.2 0.2 0.2 rg 50 245 Td (2. Compound database query enforces: SELECT * WHERE id = :appId AND owner_id = :sessionUserId.) Tj ET
+BT /F1 9.5 Tf 0.2 0.2 0.2 rg 50 230 Td (3. Cross-tenant queries by User A to read User B's record fail gracefully with HTTP 403 Forbidden.) Tj ET
+BT /F1 9.5 Tf 0.2 0.2 0.2 rg 50 215 Td (4. Non-existent queries return HTTP 404 without leaking internal schema or stack traces.) Tj ET
+0.9 0.97 0.92 rg 50 160 512 40 re f
+0.1 0.6 0.3 RG 1 w 50 160 512 40 re s
+BT /F2 10 Tf 0.1 0.5 0.2 rg 65 182 Td (VITEST INTEGRATION TEST PROOF: 6 / 6 TESTS PASSING) Tj ET
+BT /F1 9 Tf 0.2 0.4 0.2 rg 65 168 Td (Verified cross-tenant rejection, 401 unauthorized handling, and clean error sanitization.) Tj ET
+BT /F1 8 Tf 0.5 0.5 0.5 rg 260 50 Td (Page 1 of 2 - Datheon Internship Official Report) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Length 3502 >>
+stream
+0.05 0.09 0.16 rg 36 715 540 45 re f
+BT /F2 15 Tf 1 1 1 rg 50 732 Td (CRYPTOGRAPHIC SECURITY & DAST AUDIT (TASKS 3 & 4)) Tj ET
+0.55 0.36 0.96 rg 36 675 540 22 re f
+BT /F2 12 Tf 1 1 1 rg 45 682 Td (TASK 3: CRYPTOGRAPHIC SESSION SECURITY & RATE LIMITING) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.2 rg 50 650 Td (Storage Architecture:) Tj /F1 10 Tf ( Replaced localStorage with HttpOnly; SameSite=Lax; Secure cookies.) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.2 rg 50 635 Td (Cryptographic Defense:) Tj /F1 10 Tf ( HMAC-SHA256 signed JWT with 1-hour expiration and token rotation.) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.2 rg 50 620 Td (Sliding-Window Limiter:) Tj /F1 10 Tf ( In-memory token bucket throttling automated parameter fuzzing.) Tj ET
+BT /F1 9 Tf 0.3 0.3 0.3 rg 50 600 Td (Sets X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset. Excessive bursts yield HTTP 429.) Tj ET
+0.15 0.5 0.9 rg 36 560 540 22 re f
+BT /F2 12 Tf 1 1 1 rg 45 567 Td (TASK 4: PUBLIC ENDPOINT SHIELDING & AUTOMATED DAST CI/CD) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.2 rg 50 535 Td (Dynamic String Masking:) Tj /F1 10 Tf ( Student lookups dynamically redact PII before transmission:) Tj ET
+BT /F3 9.5 Tf 0.1 0.4 0.7 rg 65 515 Td (Email: yadishkumar38@gmail.com  ->  y***********8@gmail.com) Tj ET
+BT /F3 9.5 Tf 0.1 0.4 0.7 rg 65 500 Td (Phone: +91-98765-43210          ->  +XX-XXX-XXX-3210) Tj ET
+BT /F3 9.5 Tf 0.1 0.4 0.7 rg 65 485 Td (Name:  Yadish Kumar             ->  Y***** K****) Tj ET
+BT /F1 9.5 Tf 0.2 0.2 0.2 rg 50 465 Td (Confidential mentor grades and internal feedback notes are stripped completely.) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.2 rg 50 440 Td (Security Headers:) Tj /F1 9.5 Tf ( Content-Security-Policy, HSTS (max-age=31536000), X-Frame-Options: DENY) Tj ET
+BT /F2 10 Tf 0.1 0.1 0.2 rg 50 425 Td (Automated CI/CD:) Tj /F1 9.5 Tf ( GitHub Actions workflow executing type checking, test suites, and secret scanning.) Tj ET
+0.96 0.97 0.98 rg 36 260 540 145 re f
+0.8 0.85 0.9 RG 1 w 36 260 540 145 re s
+BT /F2 12 Tf 0.1 0.5 0.2 rg 50 380 Td (OFFICIAL SUBMISSION VERIFICATION CHECKLIST (15/15 PASS)) Tj ET
+BT /F2 9.5 Tf 0.2 0.2 0.2 rg 50 360 Td ([x] Task 1:) Tj /F1 9.5 Tf ( Black-Box IDOR Fuzzing PoC script + CVSS 3.1 Disclosure Report) Tj ET
+BT /F2 9.5 Tf 0.2 0.2 0.2 rg 50 340 Td ([x] Task 2:) Tj /F1 9.5 Tf ( Hardened route handler + Git diff patch + 6 Vitest integration tests) Tj ET
+BT /F2 9.5 Tf 0.2 0.2 0.2 rg 50 320 Td ([x] Task 3:) Tj /F1 9.5 Tf ( HttpOnly cookie authentication + Sliding window rate limiter (5 tests)) Tj ET
+BT /F2 9.5 Tf 0.2 0.2 0.2 rg 50 300 Td ([x] Task 4:) Tj /F1 9.5 Tf ( Dynamic PII masking + Security headers + CI/CD pipeline (4 tests)) Tj ET
+BT /F2 9.5 Tf 0.2 0.2 0.2 rg 50 280 Td ([x] LinkedIn:) Tj /F1 9.5 Tf ( Executive walkthrough post tagging @Datheon + 4 slide images) Tj ET
+0.05 0.09 0.16 rg 36 120 540 115 re f
+BT /F2 11 Tf 0.22 0.74 0.97 rg 50 210 Td (SUBMISSION STATEMENT & INTEGRITY HASH) Tj ET
+BT /F1 9 Tf 0.9 0.9 0.9 rg 50 190 Td (I hereby submit this completed application security audit and zero-trust engineering proof of work) Tj ET
+BT /F1 9 Tf 0.9 0.9 0.9 rg 50 175 Td (for the Datheon Application Security & API Pentesting Internship.) Tj ET
+BT /F2 9.5 Tf 1 1 1 rg 50 150 Td (Candidate: Yadish Kumar) Tj /F1 9.5 Tf 220 150 Td (Datheon Application ID: DT-2026-7ZENR) Tj ET
+BT /F3 8.5 Tf 0.38 0.74 0.97 rg 50 135 Td (GitHub Repo: https://github.com/yadishkumar38-sketch/Datheon_AppSec_Internship) Tj ET
+BT /F1 8 Tf 0.5 0.5 0.5 rg 260 50 Td (Page 2 of 2 - Datheon Internship Official Report) Tj ET
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000267 00000 n 
+0000000413 00000 n 
+0000000483 00000 n 
+0000000558 00000 n 
+0000000626 00000 n 
+0000004327 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+7881
+%%EOF
