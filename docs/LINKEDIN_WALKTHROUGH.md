@@ -5,6 +5,21 @@
 
 ---
 
+### 📸 Visual Slide Deck for LinkedIn (Photos to Attach)
+
+Attach these 4 slide images to your LinkedIn post as an image gallery or carousel:
+
+| Slide # | Module | Image File | Description |
+|:---:|:---|:---|:---|
+| **Slide 1** | **Task 1: IDOR Discovery** | [`task1_idor_reconnaissance.svg`](../assets/linkedin_photos/task1_idor_reconnaissance.svg) | CVSS 7.5 High, Terminal cURL fuzzing, unauthenticated PII leak |
+| **Slide 2** | **Task 2: BOLA Remediation** | [`task2_bola_remediation.svg`](../assets/linkedin_photos/task2_bola_remediation.svg) | Before vs After Code Diff, compound DB query, Vitest 6/6 tests passing |
+| **Slide 3** | **Task 3: Session Security** | [`task3_session_security.svg`](../assets/linkedin_photos/task3_session_security.svg) | HttpOnly cookie vs localStorage, HMAC-SHA256, Sliding Window Rate Limiter (HTTP 429) |
+| **Slide 4** | **Task 4: PII Shielding** | [`task4_pii_shielding.svg`](../assets/linkedin_photos/task4_pii_shielding.svg) | Dynamic string masking for `DT-2026-7ZENR`, Enterprise CSP/HSTS headers, CI/CD Pipeline |
+
+> 💡 **Quick PNG Downloader:** Open [`assets/linkedin_photos/linkedin_slides_viewer.html`](../assets/linkedin_photos/linkedin_slides_viewer.html) in your browser (Chrome or Edge) and click **"Download This Slide as PNG"** to get crystal-clear 1200x675 PNG images ready for LinkedIn upload!
+
+---
+
 ### 📝 LinkedIn Post Template
 
 ```markdown

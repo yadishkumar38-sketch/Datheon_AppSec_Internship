@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#061e1b"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="greenAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bg2)"/>
+
+  <!-- Cyber Grid Lines -->
+  <g stroke="#1e293b" stroke-width="0.8" opacity="0.4">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="240" y1="0" x2="240" y2="675"/>
+    <line x1="480" y1="0" x2="480" y2="675"/>
+    <line x1="720" y1="0" x2="720" y2="675"/>
+    <line x1="960" y1="0" x2="960" y2="675"/>
+  </g>
+
+  <!-- Header Section -->
+  <rect x="50" y="35" width="1100" height="65" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#shadow2)"/>
+  
+  <rect x="70" y="47" width="150" height="40" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1.2"/>
+  <text x="145" y="72" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" fill="#10b981">🛡️ DATHEON</text>
+
+  <text x="240" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#f8fafc">APPLICATION SECURITY &amp; API PENTESTING INTERNSHIP</text>
+  <text x="240" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Cadence Engine · Milestone Schedule · Proof of Work Submission</text>
+
+  <rect x="910" y="47" width="220" height="40" rx="6" fill="#1e293b" stroke="#475569"/>
+  <text x="925" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">👤 Yadish Kumar</text>
+  <text x="925" y="79" font-family="monospace" font-size="10" fill="#10b981">ID: DT-2026-7ZENR</text>
+
+  <!-- Task 2 Badge -->
+  <g transform="translate(50, 120)">
+    <rect x="0" y="0" width="1100" height="55" rx="8" fill="url(#cardGrad2)" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="15" y="11" width="115" height="32" rx="6" fill="url(#greenAccent)"/>
+    <text x="72" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="900" fill="#064e3b">TASK 2</text>
+    <text x="145" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#ffffff">Remediating Broken Object Level Authorization (BOLA/IDOR) in Node.js / TypeScript</text>
+    <text x="1080" y="33" text-anchor="end" font-family="monospace" font-size="12" font-weight="700" fill="#34d399">ZERO-TRUST GUARDS</text>
+  </g>
+
+  <!-- LEFT: Vulnerable Code -->
+  <g transform="translate(50, 195)" filter="url(#shadow2)">
+    <rect width="530" height="370" rx="10" fill="#0a0507" stroke="#ef4444" stroke-width="1.5"/>
+    <rect width="530" height="35" rx="10" fill="#1f1215"/>
+    <text x="20" y="23" font-family="monospace" font-size="12" font-weight="700" fill="#f87171">❌ BEFORE: Vulnerable Route Handler</text>
+    
+    <g transform="translate(20, 55)" font-family="monospace" font-size="11">
+      <text x="0" y="0" fill="#9ca3af">// Naive single parameter lookup without auth</text>
+      <text x="0" y="20" fill="#fca5a5">router.get('/dashboard', (req, res) =&gt; {</text>
+      <text x="20" y="40" fill="#fca5a5">const appId = req.query.appId;</text>
+      
+      <text x="20" y="70" fill="#ef4444">// FLAW: Directly queries database by ID</text>
+      <text x="20" y="90" fill="#fca5a5">const record = db.query(</text>
+      <text x="40" y="110" fill="#f87171">"SELECT * WHERE id = ?", [appId]</text>
+      <text x="20" y="130" fill="#fca5a5">);</text>
+      
+      <text x="20" y="160" fill="#ef4444">// FLAW: Returns data to ANY unauthenticated caller</text>
+      <text x="20" y="180" fill="#fca5a5">res.json(record);</text>
+      <text x="0" y="200" fill="#fca5a5">});</text>
+
+      <rect x="0" y="230" width="490" height="65" rx="6" fill="#2d1215" stroke="#ef4444"/>
+      <text x="15" y="252" font-family="sans-serif" font-size="11" font-weight="700" fill="#f87171">VULNERABILITY RISKS:</text>
+      <text x="15" y="270" font-family="sans-serif" font-size="10" fill="#fca5a5">• Attacker can iterate through all student IDs</text>
+      <text x="15" y="285" font-family="sans-serif" font-size="10" fill="#fca5a5">• User A can access User B's private grades and notes</text>
+    </g>
+  </g>
+
+  <!-- RIGHT: Hardened Code -->
+  <g transform="translate(620, 195)" filter="url(#shadow2)">
+    <rect width="530" height="370" rx="10" fill="#041310" stroke="#10b981" stroke-width="1.8"/>
+    <rect width="530" height="35" rx="10" fill="#092d24"/>
+    <text x="20" y="23" font-family="monospace" font-size="12" font-weight="700" fill="#34d399">✅ AFTER: Zero-Trust Hardened Endpoint</text>
+    
+    <g transform="translate(20, 55)" font-family="monospace" font-size="11">
+      <text x="0" y="0" fill="#9ca3af">// 1. authGuard middleware enforces session verification</text>
+      <text x="0" y="20" fill="#6ee7b7">router.get('/dashboard/:appId', authGuard, (req, res) =&gt; {</text>
+      <text x="20" y="40" fill="#a7f3d0">const { appId } = req.params;</text>
+      <text x="20" y="60" fill="#a7f3d0">const sessionUser = req.sessionUser!; // Authenticated</text>
+
+      <text x="20" y="85" fill="#34d399">// 2. Compound query: filter by BOTH appId AND ownerId</text>
+      <text x="20" y="105" fill="#a7f3d0">const record = db.query(</text>
+      <text x="40" y="125" fill="#34d399">"SELECT * WHERE id = ? AND owner_id = ?",</text>
+      <text x="40" y="145" fill="#34d399">[appId, sessionUser.userId]</text>
+      <text x="20" y="165" fill="#a7f3d0">);</text>
+
+      <text x="20" y="190" fill="#34d399">// 3. Graceful 403 without leaking database traces</text>
+      <text x="20" y="210" fill="#a7f3d0">if (!record) return res.status(403).json({</text>
+      <text x="40" y="230" fill="#6ee7b7">error: 'ForbiddenAccess', message: 'Access denied'</text>
+      <text x="20" y="250" fill="#a7f3d0">});</text>
+
+      <text x="20" y="275" fill="#6ee7b7">res.status(200).json({ success: true, data: record });</text>
+      <text x="0" y="295" fill="#6ee7b7">});</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM: Vitest Integration Results Banner -->
+  <g transform="translate(50, 580)" filter="url(#shadow2)">
+    <rect width="1100" height="60" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <circle cx="35" cy="30" r="12" fill="#10b981"/>
+    <text x="35" y="35" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="900" fill="#ffffff">✓</text>
+    <text x="60" y="27" font-family="sans-serif" font-size="13" font-weight="800" fill="#34d399">VITEST INTEGRATION TEST SUITE: 6/6 TESTS PASSING</text>
+    <text x="60" y="45" font-family="monospace" font-size="11" fill="#cbd5e1">✓ Reject unauth (401) | ✓ Allow User A own resource | ✓ Reject User A on User B (403) | ✓ Zero DB schema leak</text>
+    <rect x="940" y="15" width="140" height="30" rx="6" fill="#064e3b" stroke="#10b981"/>
+    <text x="1010" y="35" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="800" fill="#34d399">PULL REQUEST READY</text>
+  </g>
+</svg>

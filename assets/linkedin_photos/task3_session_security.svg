@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#140f28"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="purpleAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg3)"/>
+
+  <!-- Cyber Grid Lines -->
+  <g stroke="#1e293b" stroke-width="0.8" opacity="0.4">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="240" y1="0" x2="240" y2="675"/>
+    <line x1="480" y1="0" x2="480" y2="675"/>
+    <line x1="720" y1="0" x2="720" y2="675"/>
+    <line x1="960" y1="0" x2="960" y2="675"/>
+  </g>
+
+  <!-- Header Section -->
+  <rect x="50" y="35" width="1100" height="65" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#shadow3)"/>
+  
+  <rect x="70" y="47" width="150" height="40" rx="6" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.2"/>
+  <text x="145" y="72" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" fill="#8b5cf6">🛡️ DATHEON</text>
+
+  <text x="240" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#f8fafc">APPLICATION SECURITY &amp; API PENTESTING INTERNSHIP</text>
+  <text x="240" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Cadence Engine · Milestone Schedule · Proof of Work Submission</text>
+
+  <rect x="910" y="47" width="220" height="40" rx="6" fill="#1e293b" stroke="#475569"/>
+  <text x="925" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">👤 Yadish Kumar</text>
+  <text x="925" y="79" font-family="monospace" font-size="10" fill="#8b5cf6">ID: DT-2026-7ZENR</text>
+
+  <!-- Task 3 Badge -->
+  <g transform="translate(50, 120)">
+    <rect x="0" y="0" width="1100" height="55" rx="8" fill="url(#cardGrad3)" stroke="#8b5cf6" stroke-width="1.5"/>
+    <rect x="15" y="11" width="115" height="32" rx="6" fill="url(#purpleAccent)"/>
+    <text x="72" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="900" fill="#ffffff">TASK 3</text>
+    <text x="145" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#ffffff">Cryptographic Session Security: HTTP-Only Cookies vs Stateless JWT Defense</text>
+    <text x="1080" y="33" text-anchor="end" font-family="monospace" font-size="12" font-weight="700" fill="#a78bfa">XSS RESISTANT</text>
+  </g>
+
+  <!-- LEFT: Cookie Cryptographic Defense -->
+  <g transform="translate(50, 195)" filter="url(#shadow3)">
+    <rect width="530" height="440" rx="12" fill="#0f172a" stroke="#8b5cf6" stroke-width="1.5"/>
+    <rect width="530" height="38" rx="12" fill="#1e1838"/>
+    <text x="20" y="24" font-family="sans-serif" font-size="13" font-weight="800" fill="#c4b5fd">🔐 HTTP-ONLY COOKIE vs. LOCALSTORAGE DEFENSE</text>
+
+    <!-- Comparison Items -->
+    <g transform="translate(20, 55)">
+      <rect width="490" height="80" rx="8" fill="#1e1018" stroke="#ef4444" stroke-width="1.2"/>
+      <text x="15" y="24" font-family="sans-serif" font-size="12" font-weight="800" fill="#f87171">❌ INSECURE: localStorage / sessionStorage</text>
+      <text x="15" y="44" font-family="sans-serif" font-size="10.5" fill="#fca5a5">• Tokens accessible via JavaScript (document.cookie / localStorage).</text>
+      <text x="15" y="62" font-family="sans-serif" font-size="10.5" fill="#fca5a5">• A single Cross-Site Scripting (XSS) vulnerability permits full account takeover.</text>
+
+      <rect y="95" width="490" height="135" rx="8" fill="#0c1d1a" stroke="#10b981" stroke-width="1.5"/>
+      <text x="15" y="119" font-family="sans-serif" font-size="12" font-weight="800" fill="#34d399">✅ HARDENED: Cryptographic HTTP-Only Cookie</text>
+      <text x="15" y="139" font-family="monospace" font-size="10.5" fill="#a7f3d0">Set-Cookie: datheon_secure_session={HMAC-SHA256};</text>
+      <text x="25" y="157" font-family="sans-serif" font-size="10" fill="#cbd5e1">🛡️ <tspan font-weight="700" fill="#34d399">HttpOnly</tspan>: Inaccessible to JavaScript (completely blocks XSS theft)</text>
+      <text x="25" y="175" font-family="sans-serif" font-size="10" fill="#cbd5e1">🛡️ <tspan font-weight="700" fill="#34d399">SameSite=Lax</tspan>: Mitigates Cross-Site Request Forgery (CSRF)</text>
+      <text x="25" y="193" font-family="sans-serif" font-size="10" fill="#cbd5e1">🛡️ <tspan font-weight="700" fill="#34d399">Secure</tspan>: Enforced strictly across encrypted TLS/HTTPS channels</text>
+      <text x="25" y="211" font-family="sans-serif" font-size="10" fill="#cbd5e1">🛡️ <tspan font-weight="700" fill="#34d399">Max-Age=3600</tspan>: 1-hour strict expiration lifecycle</text>
+
+      <!-- Signature verification badge -->
+      <rect y="245" width="490" height="120" rx="8" fill="#1e1838" stroke="#8b5cf6" stroke-width="1.2"/>
+      <text x="15" y="270" font-family="sans-serif" font-size="11" font-weight="800" fill="#c4b5fd">HMAC-SHA256 SIGNING &amp; TOKEN ROTATION</text>
+      <text x="15" y="292" font-family="monospace" font-size="10" fill="#cbd5e1">• Alg: HS256 (High-entropy secret key)</text>
+      <text x="15" y="310" font-family="monospace" font-size="10" fill="#cbd5e1">• Payload: { userId: "USR-777", role: "student", iat, exp }</text>
+      <text x="15" y="328" font-family="monospace" font-size="10" fill="#cbd5e1">• Tampered signatures rejected with HTTP 401 Unauthorized</text>
+      <text x="15" y="348" font-family="sans-serif" font-size="10" fill="#34d399">✓ Tested with Vitest: 5/5 Session Tests Passing</text>
+    </g>
+  </g>
+
+  <!-- RIGHT: Sliding Window Rate Limiting -->
+  <g transform="translate(620, 195)" filter="url(#shadow3)">
+    <rect width="530" height="440" rx="12" fill="#030712" stroke="#06b6d4" stroke-width="1.5"/>
+    <rect width="530" height="38" rx="12" fill="#082f49"/>
+    <text x="20" y="24" font-family="sans-serif" font-size="13" font-weight="800" fill="#38bdf8">⚡ SLIDING-WINDOW RATE LIMITER &amp; ANTI-FUZZING</text>
+
+    <g transform="translate(20, 55)" font-family="monospace" font-size="11">
+      <text x="0" y="0" fill="#38bdf8"># Normal Requests (Within 15 req/min window):</text>
+      <text x="0" y="20" fill="#e2e8f0">$ curl -i "http://localhost:3000/api/v2/auth/me"</text>
+      <text x="0" y="42" fill="#10b981">HTTP/1.1 200 OK</text>
+      <text x="0" y="60" fill="#38bdf8">X-RateLimit-Limit: 15</text>
+      <text x="0" y="78" fill="#38bdf8">X-RateLimit-Remaining: 14</text>
+      <text x="0" y="96" fill="#38bdf8">X-RateLimit-Reset: 1732280000</text>
+
+      <text x="0" y="130" fill="#f87171"># Automated Parameter Fuzzing Detected (Burst &gt; 15):</text>
+      <text x="0" y="150" fill="#fca5a5">$ curl -i "http://localhost:3000/api/v2/public/verify/DT-2026-..."</text>
+      <text x="0" y="172" fill="#ef4444">HTTP/1.1 429 Too Many Requests</text>
+      <text x="0" y="190" fill="#f87171">Retry-After: 60</text>
+      <text x="0" y="208" fill="#f87171">X-RateLimit-Remaining: 0</text>
+
+      <text x="0" y="235" fill="#fca5a5">{</text>
+      <text x="20" y="253" fill="#fca5a5">"error": "TooManyRequests",</text>
+      <text x="20" y="271" fill="#fca5a5">"message": "Rate limit exceeded: Automated burst detected.",</text>
+      <text x="20" y="289" fill="#fca5a5">"retryAfterSeconds": 60,</text>
+      <text x="20" y="307" fill="#fca5a5">"securityAdvisory": "OWASP API4:2023 Defense Active"</text>
+      <text x="0" y="325" fill="#fca5a5">}</text>
+
+      <rect x="0" y="345" width="490" height="30" rx="6" fill="#082f49" stroke="#38bdf8"/>
+      <text x="15" y="365" font-family="sans-serif" font-size="10.5" font-weight="700" fill="#38bdf8">🛡️ Defends against Automated Credential Stuffing &amp; ID Guessing</text>
+    </g>
+  </g>
+</svg>

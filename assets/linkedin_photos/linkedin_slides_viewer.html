@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datheon AppSec Internship — LinkedIn Slide Deck (Yadish Kumar)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #0b0f19;
+      color: #f8fafc;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      max-width: 1200px;
+      width: 100%;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111827;
+      padding: 20px 25px;
+      border-radius: 12px;
+      border: 1px solid #374151;
+    }
+    h1 { font-size: 20px; font-weight: 800; color: #38bdf8; }
+    p.sub { font-size: 13px; color: #9ca3af; margin-top: 4px; }
+    .badge {
+      background: #1e293b;
+      border: 1px solid #475569;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #34d399;
+    }
+    .carousel-nav {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .nav-btn {
+      flex: 1;
+      padding: 12px 16px;
+      background: #1f2937;
+      border: 1px solid #374151;
+      border-radius: 8px;
+      color: #e5e7eb;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .nav-btn:hover { background: #374151; }
+    .nav-btn.active {
+      background: #2563eb;
+      border-color: #3b82f6;
+      color: #ffffff;
+      box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+    }
+    .slide-container {
+      max-width: 1200px;
+      width: 100%;
+      background: #000;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    }
+    .slide-wrapper {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .slide-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .action-bar {
+      max-width: 1200px;
+      width: 100%;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111827;
+      padding: 15px 25px;
+      border-radius: 10px;
+      border: 1px solid #374151;
+    }
+    .download-btn {
+      background: #059669;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .download-btn:hover { background: #10b981; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>🛡️ Datheon AppSec & API Pentesting Internship — LinkedIn Post Photos</h1>
+      <p class="sub">High-Resolution 16:9 Presentation Deck · Student: Yadish Kumar (ID: DT-2026-7ZENR) · Tag: @Datheon</p>
+    </div>
+    <div class="badge">15/15 Tests Passing</div>
+  </header>
+
+  <div class="carousel-nav">
+    <button class="nav-btn active" onclick="showSlide(1)">Slide 1: Task 1 (IDOR Discovery)</button>
+    <button class="nav-btn" onclick="showSlide(2)">Slide 2: Task 2 (BOLA Remediation)</button>
+    <button class="nav-btn" onclick="showSlide(3)">Slide 3: Task 3 (Session Security)</button>
+    <button class="nav-btn" onclick="showSlide(4)">Slide 4: Task 4 (PII Shielding)</button>
+  </div>
+
+  <div class="slide-container">
+    <div class="slide-wrapper" id="slideFrame">
+      <img id="currentSlideImg" src="task1_idor_reconnaissance.svg" alt="LinkedIn Slide">
+    </div>
+  </div>
+
+  <div class="action-bar">
+    <span id="slideDesc" style="color:#94a3b8; font-size:13px;">Task 1: Black-Box Reconnaissance & URL Parameter Fuzzing (CVSS 7.5 High)</span>
+    <button class="download-btn" onclick="downloadCurrentSlide()">
+      📥 Download This Slide as PNG (1200x675)
+    </button>
+  </div>
+
+  <canvas id="exportCanvas" width="1200" height="675" style="display:none;"></canvas>
+
+  <script>
+    const slides = [
+      { id: 1, file: 'task1_idor_reconnaissance.svg', name: 'task1_idor_reconnaissance.png', desc: 'Task 1: Black-Box Reconnaissance & URL Parameter Fuzzing (CVSS 7.5 High)' },
+      { id: 2, file: 'task2_bola_remediation.svg', name: 'task2_bola_remediation.png', desc: 'Task 2: Zero-Trust BOLA Remediation & Compound DB Query Defense' },
+      { id: 3, file: 'task3_session_security.svg', name: 'task3_session_security.png', desc: 'Task 3: Cryptographic Session Security & Sliding Window Rate Limiting' },
+      { id: 4, file: 'task4_pii_shielding.svg', name: 'task4_pii_shielding.png', desc: 'Task 4: Public Endpoint Shielding, Dynamic PII Masking & DAST CI/CD' }
+    ];
+
+    let currentIdx = 0;
+
+    function showSlide(index) {
+      currentIdx = index - 1;
+      const slide = slides[currentIdx];
+      document.getElementById('currentSlideImg').src = slide.file;
+      document.getElementById('slideDesc').innerText = slide.desc;
+      
+      const btns = document.querySelectorAll('.nav-btn');
+      btns.forEach((btn, i) => {
+        btn.classList.toggle('active', i === currentIdx);
+      });
+    }
+
+    function downloadCurrentSlide() {
+      const slide = slides[currentIdx];
+      const canvas = document.getElementById('exportCanvas');
+      const ctx = canvas.getContext('2d');
+      const img = new Image();
+      
+      img.onload = function() {
+        ctx.clearRect(0, 0, 1200, 675);
+        ctx.drawImage(img, 0, 0, 1200, 675);
+        const link = document.createElement('a');
+        link.download = slide.name;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      };
+      
+      img.src = slide.file;
+    }
+  </script>
+</body>
+</html>

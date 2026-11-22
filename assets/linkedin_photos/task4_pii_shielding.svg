@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="cardGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="blueAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg4)"/>
+
+  <!-- Cyber Grid Lines -->
+  <g stroke="#1e293b" stroke-width="0.8" opacity="0.4">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="240" y1="0" x2="240" y2="675"/>
+    <line x1="480" y1="0" x2="480" y2="675"/>
+    <line x1="720" y1="0" x2="720" y2="675"/>
+    <line x1="960" y1="0" x2="960" y2="675"/>
+  </g>
+
+  <!-- Header Section -->
+  <rect x="50" y="35" width="1100" height="65" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.5" filter="url(#shadow4)"/>
+  
+  <rect x="70" y="47" width="150" height="40" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="145" y="72" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" fill="#38bdf8">🛡️ DATHEON</text>
+
+  <text x="240" y="65" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#f8fafc">APPLICATION SECURITY &amp; API PENTESTING INTERNSHIP</text>
+  <text x="240" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Cadence Engine · Milestone Schedule · Proof of Work Submission</text>
+
+  <rect x="910" y="47" width="220" height="40" rx="6" fill="#1e293b" stroke="#475569"/>
+  <text x="925" y="64" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#e2e8f0">👤 Yadish Kumar</text>
+  <text x="925" y="79" font-family="monospace" font-size="10" fill="#38bdf8">ID: DT-2026-7ZENR</text>
+
+  <!-- Task 4 Badge -->
+  <g transform="translate(50, 120)">
+    <rect x="0" y="0" width="1100" height="55" rx="8" fill="url(#cardGrad4)" stroke="#3b82f6" stroke-width="1.5"/>
+    <rect x="15" y="11" width="115" height="32" rx="6" fill="url(#blueAccent)"/>
+    <text x="72" y="32" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="900" fill="#ffffff">TASK 4</text>
+    <text x="145" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800" fill="#ffffff">Public Endpoint Shielding, PII Masking &amp; Automated DAST Pipeline</text>
+    <text x="1080" y="33" text-anchor="end" font-family="monospace" font-size="12" font-weight="700" fill="#60a5fa">ZERO-LEAKAGE</text>
+  </g>
+
+  <!-- LEFT: Dynamic PII Masking -->
+  <g transform="translate(50, 195)" filter="url(#shadow4)">
+    <rect width="530" height="440" rx="12" fill="#0f172a" stroke="#3b82f6" stroke-width="1.5"/>
+    <rect width="530" height="38" rx="12" fill="#1e293b"/>
+    <text x="20" y="24" font-family="sans-serif" font-size="13" font-weight="800" fill="#93c5fd">🛡️ DYNAMIC PII STRING MASKING PIPELINE</text>
+
+    <g transform="translate(20, 55)">
+      <!-- Unmasked Raw vs Masked -->
+      <rect width="490" height="155" rx="8" fill="#1e1828" stroke="#ef4444" stroke-width="1.2"/>
+      <text x="15" y="22" font-family="monospace" font-size="11" font-weight="700" fill="#f87171">INTERNAL SENSITIVE RECORD (Before Masking):</text>
+      <text x="15" y="42" font-family="monospace" font-size="10.5" fill="#cbd5e1">appId: "DT-2026-7ZENR"</text>
+      <text x="15" y="60" font-family="monospace" font-size="10.5" fill="#fca5a5">studentName: "Yadish Kumar" [LEAKAGE RISK]</text>
+      <text x="15" y="78" font-family="monospace" font-size="10.5" fill="#fca5a5">email: "yadishkumar38@gmail.com" [PII EXPOSURE]</text>
+      <text x="15" y="96" font-family="monospace" font-size="10.5" fill="#fca5a5">phone: "+91-98765-43210" [PRIVATE CONTACT]</text>
+      <text x="15" y="114" font-family="monospace" font-size="10.5" fill="#fca5a5">grade: "Outstanding" | notes: "Candidate verified..."</text>
+      <text x="15" y="138" font-family="sans-serif" font-size="10" fill="#ef4444">⚠️ Exposing unmasked data breaches GDPR, FERPA &amp; DPDP compliance.</text>
+
+      <path d="M 245 160 L 245 180" stroke="#3b82f6" stroke-width="2"/>
+
+      <rect y="185" width="490" height="180" rx="8" fill="#0c1d1a" stroke="#10b981" stroke-width="1.5"/>
+      <text x="15" y="210" font-family="monospace" font-size="11" font-weight="700" fill="#34d399">PUBLIC SANITIZED PAYLOAD (GET /api/v2/public/verify/DT-2026-7ZENR):</text>
+      <text x="15" y="232" font-family="monospace" font-size="10.5" fill="#cbd5e1">"appId": "DT-2026-7ZENR",</text>
+      <text x="15" y="250" font-family="monospace" font-size="10.5" fill="#6ee7b7">"studentNameMasked": "Y***** K****",</text>
+      <text x="15" y="268" font-family="monospace" font-size="10.5" fill="#6ee7b7">"emailMasked": "y***********8@gmail.com",</text>
+      <text x="15" y="286" font-family="monospace" font-size="10.5" fill="#6ee7b7">"phoneMasked": "+XX-XXX-XXX-3210",</text>
+      <text x="15" y="304" font-family="monospace" font-size="10.5" fill="#6ee7b7">"verificationBadge": "VERIFIED_DATHEON_STUDENT_CREDENTIAL"</text>
+      <text x="15" y="324" font-family="sans-serif" font-size="10" fill="#34d399">✓ Confidential mentor notes &amp; grades stripped completely.</text>
+      <text x="15" y="342" font-family="sans-serif" font-size="10" fill="#34d399">✓ 100% Zero PII leakage on public credential verification.</text>
+    </g>
+  </g>
+
+  <!-- RIGHT: Security Headers & CI/CD Pipeline -->
+  <g transform="translate(620, 195)" filter="url(#shadow4)">
+    <rect width="530" height="440" rx="12" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="530" height="38" rx="12" fill="#064e3b"/>
+    <text x="20" y="24" font-family="sans-serif" font-size="13" font-weight="800" fill="#6ee7b7">🛡️ ENTERPRISE HEADERS &amp; CI/CD PIPELINE</text>
+
+    <g transform="translate(20, 55)">
+      <rect width="490" height="155" rx="8" fill="#030712" stroke="#334155" stroke-width="1.2"/>
+      <text x="15" y="24" font-family="sans-serif" font-size="11" font-weight="800" fill="#38bdf8">OWASP REST SECURITY CHEAT SHEET HEADERS:</text>
+      <text x="15" y="46" font-family="monospace" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">Content-Security-Policy</tspan>: default-src 'self'; frame-ancestors 'none';</text>
+      <text x="15" y="66" font-family="monospace" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">Strict-Transport-Security</tspan>: max-age=31536000; includeSubDomains</text>
+      <text x="15" y="86" font-family="monospace" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">X-Content-Type-Options</tspan>: nosniff (No MIME confusion)</text>
+      <text x="15" y="106" font-family="monospace" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">X-Frame-Options</tspan>: DENY (Anti-Clickjacking defense)</text>
+      <text x="15" y="126" font-family="monospace" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">Referrer-Policy</tspan>: strict-origin-when-cross-origin</text>
+      <text x="15" y="144" font-family="monospace" font-size="10" fill="#cbd5e1"><tspan fill="#34d399">Permissions-Policy</tspan>: camera=(), microphone=(), geolocation=()</text>
+
+      <!-- CI/CD Card -->
+      <rect y="175" width="490" height="190" rx="8" fill="#132320" stroke="#10b981" stroke-width="1.5"/>
+      <text x="15" y="202" font-family="sans-serif" font-size="12" font-weight="800" fill="#34d399">⚡ GITHUB ACTIONS SECURITY &amp; DAST CI PIPELINE</text>
+      <text x="15" y="226" font-family="monospace" font-size="10.5" fill="#cbd5e1">• Node 22 TypeScript static type check &amp; lint</text>
+      <text x="15" y="246" font-family="monospace" font-size="10.5" fill="#cbd5e1">• Automated Vitest execution: 15/15 tests passing</text>
+      <text x="15" y="266" font-family="monospace" font-size="10.5" fill="#cbd5e1">• Pre-commit credential leak scan (Zero exposed tokens)</text>
+      <text x="15" y="286" font-family="monospace" font-size="10.5" fill="#cbd5e1">• Automated verification of required HTTP security headers</text>
+
+      <rect x="15" y="305" width="460" height="35" rx="6" fill="#064e3b" stroke="#10b981"/>
+      <text x="245" y="327" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="900" fill="#34d399">✓ PIPELINE PASSING: 100% AUDIT &amp; TEST COMPLIANCE</text>
+    </g>
+  </g>
+</svg>

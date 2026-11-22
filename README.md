@@ -250,10 +250,15 @@ python scripts/idor_poc_fuzzer.py
 
 ---
 
-## 📢 LinkedIn Walkthrough Post Template
+## 📢 LinkedIn Walkthrough Post & Slide Deck Photos
 
-Ready-to-publish walkthrough post tagging `@Datheon` can be found in:
-📄 **[docs/LINKEDIN_WALKTHROUGH.md](docs/LINKEDIN_WALKTHROUGH.md)**
+* Complete ready-to-publish walkthrough post template tagging `@Datheon`: 📄 **[docs/LINKEDIN_WALKTHROUGH.md](docs/LINKEDIN_WALKTHROUGH.md)**
+* **4 High-Resolution LinkedIn Presentation Slide Photos:** Located in [`assets/linkedin_photos/`](assets/linkedin_photos/)
+  * Slide 1: [Task 1 IDOR Reconnaissance](assets/linkedin_photos/task1_idor_reconnaissance.svg)
+  * Slide 2: [Task 2 BOLA Remediation](assets/linkedin_photos/task2_bola_remediation.svg)
+  * Slide 3: [Task 3 Session Security & Rate Limiting](assets/linkedin_photos/task3_session_security.svg)
+  * Slide 4: [Task 4 Public Endpoint Shielding](assets/linkedin_photos/task4_pii_shielding.svg)
+* **Interactive Slide Deck & PNG Downloader:** Open [`assets/linkedin_photos/linkedin_slides_viewer.html`](assets/linkedin_photos/linkedin_slides_viewer.html) in your browser to view and download all slides as PNG images!
 
 ---
 
