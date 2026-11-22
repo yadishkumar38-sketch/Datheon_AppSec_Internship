@@ -1,0 +1,52 @@
+{
+  "auditMetadata": {
+    "auditor": "Yadish Kumar",
+    "applicationId": "DT-2026-7ZENR",
+    "timestamp": "2026-11-22T12:15:00Z",
+    "vulnerabilityType": "OWASP API1:2023 - Broken Object Level Authorization (BOLA / IDOR)",
+    "cwe": "CWE-639: Authorization Bypass Through User-Controlled Key",
+    "cvssScore": 7.5,
+    "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+  },
+  "findings": [
+    {
+      "appId": "DT-2026-001",
+      "status": 200,
+      "vulnerable": true,
+      "leakedPii": {
+        "name": "Alice Harrison",
+        "email": "alice@datheon-intern.org",
+        "phone": "+1-555-019-2834",
+        "notes": "Strong grasp of Wireshark and OWASP Juice Shop."
+      }
+    },
+    {
+      "appId": "DT-2026-002",
+      "status": 200,
+      "vulnerable": true,
+      "leakedPii": {
+        "name": "Bob Target",
+        "email": "bob.target@datheon-intern.org",
+        "phone": "+1-555-882-9901",
+        "notes": "Pending remediation submission on JWT secret exposure."
+      }
+    },
+    {
+      "appId": "DT-2026-7ZENR",
+      "status": 200,
+      "vulnerable": true,
+      "leakedPii": {
+        "name": "Yadish Kumar",
+        "email": "yadishkumar38@gmail.com",
+        "phone": "+91-98765-43210",
+        "notes": "Candidate verified full zero-trust BOLA remediation and cryptographic token defense."
+      }
+    },
+    {
+      "appId": "DT-2026-999",
+      "status": 404,
+      "vulnerable": false,
+      "error": "HTTP Error 404: Not Found"
+    }
+  ]
+}

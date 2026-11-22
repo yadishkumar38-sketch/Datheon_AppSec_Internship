@@ -1,0 +1,88 @@
+diff --git a/src/routes/dashboard.ts b/src/routes/dashboard.ts
+index 8e4b1a2..f91c7b3 100644
+--- a/src/routes/dashboard.ts
++++ b/src/routes/dashboard.ts
+@@ -1,32 +1,63 @@
+-import { Router, Request, Response } from 'express';
+-import { queryVulnerableByAppId } from '../db/mockDatabase.js';
++import { Router, Response } from 'express';
++import { authGuard, AuthenticatedRequest } from '../middleware/authGuard.js';
++import { queryHardenedByAppIdAndOwner, queryVulnerableByAppId } from '../db/mockDatabase.js';
+ 
+ const router = Router();
+ 
+-/**
+- * VULNERABLE ENDPOINT: Single-parameter direct object lookup
+- * Lacks authentication and resource ownership validation (BOLA / IDOR).
+- */
+-router.get('/dashboard', (req: Request, res: Response) => {
+-  const appId = req.query.appId as string;
+-
+-  if (!appId) {
+-    return res.status(400).json({ error: 'Missing appId' });
+-  }
+-
+-  // Flaw: Unauthenticated query directly returning record
+-  const record = queryVulnerableByAppId(appId);
+-  if (!record) {
+-    return res.status(404).json({ error: 'Not Found' });
+-  }
+-
+-  // Flaw: Exposing sensitive PII and mentor notes
+-  return res.status(200).json(record);
+-});
++/**
++ * HARDENED ENDPOINT: Zero-Trust Authorization & Compound Query Defense
++ * 1. Enforces HTTP-only session cookie authentication (401 Unauthorized if missing/tampered).
++ * 2. Cross-references authenticated session caller against database record owner.
++ * 3. Gracefully rejects unauthorized access (403 Forbidden) without leaking database traces.
++ */
++router.get('/dashboard/:appId', authGuard, (req: AuthenticatedRequest, res: Response) => {
++  const { appId } = req.params;
++  const sessionUser = req.sessionUser!;
++
++  // Step 1: Input syntax validation
++  if (!appId || !/^DT-\d{4}-[A-Za-z0-9]+$/.test(appId)) {
++    res.status(400).json({
++      success: false,
++      error: 'InvalidParameterFormat',
++      message: 'Resource identifier format is invalid. Expected format: DT-YYYY-XXXX.',
++    });
++    return;
++  }
++
++  // Step 2: Verify record existence
++  const resourceExists = queryVulnerableByAppId(appId);
++  if (!resourceExists) {
++    res.status(404).json({
++      success: false,
++      error: 'ResourceNotFound',
++      message: 'The requested dashboard record could not be found.',
++    });
++    return;
++  }
++
++  // Step 3: Compound query - filter by BOTH resource ID AND session owner ID
++  const record = queryHardenedByAppIdAndOwner(appId, sessionUser.userId);
++
++  // Step 4: Defense-in-depth ownership verification
++  if (!record) {
++    console.warn(`[SECURITY AUDIT] BOLA attempt rejected for user: ${sessionUser.userId} on resource: ${appId}`);
++    res.status(403).json({
++      success: false,
++      error: 'ForbiddenAccess',
++      message: 'Access denied: You do not possess authorization to view this resource.',
++      statusCode: 403,
++    });
++    return;
++  }
++
++  // Step 5: Return authorized data
++  res.status(200).json({
++    success: true,
++    data: record,
++    authorizedFor: sessionUser.email,
++  });
++});
+ 
+ export default router;

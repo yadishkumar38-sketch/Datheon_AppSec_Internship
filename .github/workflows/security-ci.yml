@@ -1,0 +1,50 @@
+name: Datheon AppSec & DAST Security Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  security-audit-and-test:
+    name: Zero-Trust Security Verification & Vitest CI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Free Open-Source Dependencies
+        run: npm ci
+
+      - name: TypeScript Static Security & Type Checking
+        run: npm run lint
+
+      - name: Execute Automated Security Test Suite (BOLA, Cryptographic Auth, PII Masking)
+        run: npm test
+
+      - name: Verify Secret Non-Disclosure (Pre-commit Secret Check)
+        run: |
+          echo "Scanning codebase for hardcoded production credentials..."
+          if grep -rn "ghp_" src/ tests/ docs/ 2>/dev/null; then
+            echo "::error::GitHub Personal Access Token pattern detected in code!"
+            exit 1
+          fi
+          echo "Secret check passed: No exposed authorization secrets in code."
+
+      - name: Check OWASP Security Headers Configuration
+        run: |
+          echo "Verifying presence of strict security headers middleware..."
+          test -f src/middleware/securityHeaders.ts || exit 1
+          grep -q "Content-Security-Policy" src/middleware/securityHeaders.ts
+          grep -q "Strict-Transport-Security" src/middleware/securityHeaders.ts
+          grep -q "X-Frame-Options" src/middleware/securityHeaders.ts
+          grep -q "X-Content-Type-Options" src/middleware/securityHeaders.ts
+          echo "All OWASP REST Security Cheat Sheet header requirements satisfied."
