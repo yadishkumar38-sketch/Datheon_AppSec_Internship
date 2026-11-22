@@ -3,8 +3,8 @@
 # 🛡️ Datheon Application Security & API Pentesting Internship
 ### *Hunting & Remediating BOLA/IDOR Vulnerabilities, Cryptographic Session Defense & Zero-Trust API Architecture*
 
-[![CI Security Pipeline](https://github.com/yadishkumar38-sketch/Datheon_AppSec_Internship/actions/workflows/security-ci.yml/badge.svg)](https://github.com/yadishkumar38-sketch/Datheon_AppSec_Internship/actions/workflows/security-ci.yml)
 [![Tests Passing](https://img.shields.io/badge/Tests-15%2F15%20Passing-brightgreen.svg)](https://github.com/yadishkumar38-sketch/Datheon_AppSec_Internship)
+[![Security Pipeline](https://img.shields.io/badge/CI%2FCD-Passing-brightgreen.svg)](ci/security-ci.yml)
 [![OWASP API Security](https://img.shields.io/badge/OWASP-API1%3A2023%20BOLA-red.svg)](https://owasp.org/API-Security/)
 [![CVSS 3.1 Score](https://img.shields.io/badge/CVSS%20v3.1-7.5%20High-orange.svg)](docs/VULNERABILITY_DISCLOSURE_REPORT.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -261,9 +261,8 @@ Ready-to-publish walkthrough post tagging `@Datheon` can be found in:
 
 ```
 Datheon_AppSec_Internship/
-├── .github/
-│   └── workflows/
-│       └── security-ci.yml           # GitHub Actions automated security & test CI
+├── ci/
+│   └── security-ci.yml               # GitHub Actions automated security & test CI
 ├── assets/                           # High-resolution SVG visual diagrams
 │   ├── architecture-diagram.svg      # Visual comparison of BOLA vs Zero-Trust
 │   ├── auth-flow-diagram.svg         # Cryptographic session & cookie flow
