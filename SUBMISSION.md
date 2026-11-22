@@ -63,15 +63,13 @@ Test Files  3 passed (3)
 
 ---
 
-### 📸 LinkedIn Post Assets & Slides
+### 📸 Visual Presentation & Architecture Deck
 
-Visual presentation deck and walkthrough template for LinkedIn verification tagging `@Datheon`:
-* **Slide 1:** [`assets/linkedin_photos/task1_idor_reconnaissance.svg`](assets/linkedin_photos/task1_idor_reconnaissance.svg)
-* **Slide 2:** [`assets/linkedin_photos/task2_bola_remediation.svg`](assets/linkedin_photos/task2_bola_remediation.svg)
-* **Slide 3:** [`assets/linkedin_photos/task3_session_security.svg`](assets/linkedin_photos/task3_session_security.svg)
-* **Slide 4:** [`assets/linkedin_photos/task4_pii_shielding.svg`](assets/linkedin_photos/task4_pii_shielding.svg)
-* **Interactive Viewer & PNG Downloader:** [`assets/linkedin_photos/linkedin_slides_viewer.html`](assets/linkedin_photos/linkedin_slides_viewer.html)
-* **LinkedIn Post Template:** [`docs/LINKEDIN_WALKTHROUGH.md`](docs/LINKEDIN_WALKTHROUGH.md)
+* **Task 1 Architecture:** [`assets/linkedin_photos/task1_idor_reconnaissance.svg`](assets/linkedin_photos/task1_idor_reconnaissance.svg)
+* **Task 2 Architecture:** [`assets/linkedin_photos/task2_bola_remediation.svg`](assets/linkedin_photos/task2_bola_remediation.svg)
+* **Task 3 Architecture:** [`assets/linkedin_photos/task3_session_security.svg`](assets/linkedin_photos/task3_session_security.svg)
+* **Task 4 Architecture:** [`assets/linkedin_photos/task4_pii_shielding.svg`](assets/linkedin_photos/task4_pii_shielding.svg)
+* **Interactive Slide Deck Viewer:** [`assets/linkedin_photos/linkedin_slides_viewer.html`](assets/linkedin_photos/linkedin_slides_viewer.html)
 
 ---
 
@@ -93,5 +91,8 @@ python scripts/idor_poc_fuzzer.py
 ```
 
 ---
+
+### 🔗 Official Project Repository
+👉 **https://github.com/yadishkumar38-sketch/Datheon_AppSec_Internship**
 
 *Submitted by: Yadish Kumar · Datheon Verified Candidate (ID: DT-2026-7ZENR)*

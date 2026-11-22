@@ -319,7 +319,10 @@ Datheon_AppSec_Internship/
 
 ---
 
-## 📄 License & Attribution
+## 📄 License & Official Repository
 
 This project is licensed under the **MIT License**. Engineered for the **Datheon Application Security & API Pentesting Internship**.  
 **Student Author:** Yadish Kumar (Datheon Application ID: `DT-2026-7ZENR`).
+
+🔗 **Official Submission Repository:**  
+**https://github.com/yadishkumar38-sketch/Datheon_AppSec_Internship**
